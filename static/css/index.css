@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-size: 16px;
+    font-family: '微软雅黑';
+}
+
+body {
+    background: #fafafa;
+    color: #212529;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media(max-width:750px) {
+    .content {
+        width: 98%;
+    }
+}
+
+
+/* 文章页面中的内容样式 */

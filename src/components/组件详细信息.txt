@@ -1,0 +1,29 @@
+Home            家组件
+Login           登录注册组件
+Template        模板页组件
+front文件夹
+    index           首页组件
+    life            生活栏目组件
+    life_page       生活文章内页组件
+    it_page         IT文章内页组件
+    it              技术栏目组件
+    photo           相册栏目组件
+    my              关于我组件
+    search          搜索组件
+    photo_page      相册内容展示页
+    intro           用户信息页面
+
+basis文件夹下
+    alert           弹框组件
+    comment         评论回复组件
+    leave_word      留言板
+    falls           生活瀑布流组件
+    it_article      技术瀑布流组件
+    loading         预加载展示组件
+    page_swiper     文章内页轮播图组件
+    photo_falls     相册瀑布流组件
+    right_nav       侧边栏目组件
+    swiper_video    视频播放轮播图组件
+    swiper_photo    相册轮播图组件
+    video           视频播放组件
+    
