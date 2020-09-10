@@ -74,7 +74,7 @@ export default {
     //定义方法的地方
     //获取文章
     getIt:function(){
-      let url = 'http://localhost:3306/article/item'
+      let url = 'http://api.hjwxl.com:3000/article/item'
       let id = this.$route.query.id
       let that = this
       this.axios.get(url, {
@@ -97,7 +97,7 @@ export default {
       let bg_class = 2;
       let sm_class =  this.$route.query.sm_class
       let id = this.$route.query.id
-      let url = 'http://localhost:3306/article/smlist'
+      let url = 'http://api.hjwxl.com:3000/article/smlist'
       let that = this
       this.axios.get(url, {
           params: {
@@ -119,7 +119,7 @@ export default {
         let nlike = 'it_page' + this.$route.query.id
         let ifLike = this.$cookie.get(nlike)
         let id = this.$route.query.id;
-        let url = 'http://localhost:3306/article/getLike'
+        let url = 'http://api.hjwxl.com:3000/article/getLike'
         let that = this
         this.axios.get(url, {
         params: {
@@ -163,7 +163,7 @@ export default {
         let that = this;
         this.axios({
             method: 'post',
-            url:'http://localhost:3306/article/addLike',
+            url:'http://api.hjwxl.com:3000/article/addLike',
             data:postData
         }).then((res)=>{
             if(res.data.code == 200){
@@ -173,7 +173,7 @@ export default {
     },
     //验证当前文章是否为技术第一篇文章
     setlast:function(){
-      let url = 'http://localhost:3306/article/last'
+      let url = 'http://api.hjwxl.com:3000/article/last'
       let bg_class = 2
       let id =  this.$route.query.id
       let that = this
@@ -195,7 +195,7 @@ export default {
     },
     //获取当前文章的下一篇文章
     getNext:function(){
-      let url = 'http://localhost:3306/article/nextArt'
+      let url = 'http://api.hjwxl.com:3000/article/nextArt'
       let bg_class = 2
       let id =  this.$route.query.id
       let that = this
@@ -214,7 +214,7 @@ export default {
     },
     //获取第一篇文章
     getFirst:function(){
-      let url = 'http://localhost:3306/article/firstArt'
+      let url = 'http://api.hjwxl.com:3000/article/firstArt'
       let bg_class = 2
       let that = this
       this.axios.get(url, {

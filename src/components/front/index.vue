@@ -116,9 +116,10 @@ export default {
       let that = this;
       this.axios({
         method: 'get',
-        url:'http://localhost:3306/photo/listSw',
+        url:'http://api.hjwxl.com:3000/photo/listSw',
         data:''
       }).then((res)=>{
+        console.log(res)
         that.phptoCon = res.data 
         that.reload ()
       })
@@ -148,7 +149,7 @@ export default {
       //总页数查询
       this.axios({
         method: 'get',
-        url:'http://localhost:3306/article/list_pno',
+        url:'http://api.hjwxl.com:3000/article/list_pno',
         data:''
       }).then((res)=>{
         if(res.data.length>0){
@@ -187,7 +188,7 @@ export default {
     },
     //获取文章数据
     getArticle:function(){
-      let url = 'http://localhost:3306/article/list'
+      let url = 'http://api.hjwxl.com:3000/article/list'
       //获取当前页数
       let pno = this.at_num
       let that = this
@@ -197,6 +198,7 @@ export default {
           }
         })
         .then(function (result) {
+          console.log(result)
           if(result.data.length>0){
             that.article = result.data
             that.preload()

@@ -128,7 +128,7 @@ export default {
           //console.log(uname+','+class_name+','+article_id+','+content)
           this.axios({
               method: 'post',
-              url:'http://localhost:3306/review/upcomment',
+              url:'http://api.hjwxl.com:3000/review/upcomment',
               data:postData
           }).then((res)=>{
               if(res.data.code == 200){
@@ -173,7 +173,7 @@ export default {
         let that = this
         this.axios({
             method: 'post',
-            url:'http://localhost:3306/review/upreply',
+            url:'http://api.hjwxl.com:3000/review/upreply',
             data:postData
         }).then((res)=>{
             if(res.data.code == 200){
@@ -195,7 +195,7 @@ export default {
         }else if(this.$route.path == '/photo_page'){
             class_name = 'photo'
         }
-        let url = 'http://localhost:3306/review/comment'
+        let url = 'http://api.hjwxl.com:3000/review/comment'
         let that = this
         this.axios.get(url, {
           params: {
@@ -220,7 +220,7 @@ export default {
     //获取评论回复
     getReplay:function(a){
         let comment_id = a 
-        let url = 'http://localhost:3306/review/reply'
+        let url = 'http://api.hjwxl.com:3000/review/reply'
         let that = this
         this.axios.get(url, {
           params: {

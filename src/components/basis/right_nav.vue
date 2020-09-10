@@ -134,7 +134,7 @@ export default {
     //定义方法的地方
     //获取文章内容长度
     getLengthArticle:function(){
-      let url = 'http://localhost:3306/article/length'
+      let url = 'http://api.hjwxl.com:3000/article/length'
       let that = this
       this.axios.get(url, {
           params: {}
@@ -149,7 +149,7 @@ export default {
     },
     //获取相册内容长度
     getLengthPhoto:function(){
-      let url = 'http://localhost:3306/photo/length'
+      let url = 'http://api.hjwxl.com:3000/photo/length'
       let that = this
       this.axios.get(url, {
           params: {}
@@ -164,7 +164,7 @@ export default {
     },
     //获取游客内容长度
     getLengthVisitor:function(){
-      let url = 'http://localhost:3306/visitor/length'
+      let url = 'http://api.hjwxl.com:3000/visitor/length'
       let that = this
       this.axios.get(url, {
           params: {}

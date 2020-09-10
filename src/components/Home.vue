@@ -125,7 +125,7 @@ export default {
         let me = this;
         this.axios({
             method: 'post',
-            url:'http://localhost:3306/visitor/gain',
+            url:'http://api.hjwxl.com:3000/visitor/gain',
             data:postData
         }).then((res)=>{
           if(res.data.length > 0){

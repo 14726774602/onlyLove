@@ -126,7 +126,7 @@ export default {
     //账号验证
     verifyNname:function(num){
       let me = this; 
-      let url = 'http://localhost:3306/visitor/verify'
+      let url = 'http://api.hjwxl.com:3000/visitor/verify'
       this.axios.get(url, {
       params: {
             nname: num
@@ -211,7 +211,7 @@ export default {
           let me = this;
           this.axios({
               method: 'post',
-              url:'http://localhost:3306/visitor/login',
+              url:'http://api.hjwxl.com:3000/visitor/login',
               data:postData
           }).then((res)=>{
               //console.log(res.data.code)
@@ -243,7 +243,7 @@ export default {
           let me = this
           this.axios({
               method: 'post',
-              url:'http://localhost:3306/visitor/register',
+              url:'http://api.hjwxl.com:3000/visitor/register',
               data:postData
           }).then((res)=>{
               if(res.data.code == 200){

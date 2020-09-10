@@ -56,7 +56,7 @@ export default {
     getPhoto:function(){
       //this.photo_com = []
       let sm_class = this.$route.query.sm_class
-      let url = 'http://localhost:3306/photo/list'
+      let url = 'http://api.hjwxl.com:3000/photo/list'
       let that = this
       this.axios.get(url, {
           params: {

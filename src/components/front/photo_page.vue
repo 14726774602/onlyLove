@@ -95,7 +95,7 @@ export default {
             let nlike = 'photo_page' + this.$route.query.id
             let ifLike = this.$cookie.get(nlike)
             let id = this.$route.query.id;
-            let url = 'http://localhost:3306/photo/getLike'
+            let url = 'http://api.hjwxl.com:3000/photo/getLike'
             let that = this
             this.axios.get(url, {
             params: {
@@ -132,7 +132,7 @@ export default {
             let that = this;
             this.axios({
                 method: 'post',
-                url:'http://localhost:3306/photo/addLike',
+                url:'http://api.hjwxl.com:3000/photo/addLike',
                 data:postData
             }).then((res)=>{
                 if(res.data.code == 200){
@@ -144,7 +144,7 @@ export default {
         //获取当前相册数据
         getPhotoItem:function(){
             let id = this.$route.query.id;
-            let url = 'http://localhost:3306/photo/item'
+            let url = 'http://api.hjwxl.com:3000/photo/item'
             let that = this
             this.axios.get(url, {
             params: {

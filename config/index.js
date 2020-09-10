@@ -12,10 +12,10 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/api': {
-                target: 'http://localhost:3306', // 你请求的第三方接口
+                target: 'http://api.hjwxl.com:3000', // 你请求的第三方接口
                 changeOrigin: true, // 如果需要跨域
                 pathRewrite: { // 路径重写，
-                    '^/api': 'http://localhost:3306' // 替换target中的请求地址，也就是说以后你在请求http://api.douban.com/v2/XXXXX这个地址的时候直接写成/api即可。
+                    '^/api': 'http://api.hjwxl.com:3000' // 替换target中的请求地址，也就是说以后你在请求http://api.douban.com/v2/XXXXX这个地址的时候直接写成/api即可。
                 },
                 xfwd: false
             }

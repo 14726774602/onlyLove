@@ -106,7 +106,7 @@ export default {
         let nlike = 'life_page' + this.$route.query.id
         let ifLike = this.$cookie.get(nlike)
         let id = this.$route.query.id;
-        let url = 'http://localhost:3306/article/getLike'
+        let url = 'http://api.hjwxl.com:3000/article/getLike'
         let that = this
         this.axios.get(url, {
         params: {
@@ -143,7 +143,7 @@ export default {
         let that = this;
         this.axios({
             method: 'post',
-            url:'http://localhost:3306/article/addLike',
+            url:'http://api.hjwxl.com:3000/article/addLike',
             data:postData
         }).then((res)=>{
             if(res.data.code == 200){
@@ -166,7 +166,7 @@ export default {
     },
     //获取文章内容
     getArticle:function(){
-      let url = 'http://localhost:3306/article/item'
+      let url = 'http://api.hjwxl.com:3000/article/item'
       let id = this.$route.query.id
       let that = this
       this.axios.get(url, {
@@ -192,7 +192,7 @@ export default {
     },
     //查询当前文章是否是最后一篇或者第一遍
     setFirst:function(){
-      let url = 'http://localhost:3306/article/first'
+      let url = 'http://api.hjwxl.com:3000/article/first'
       let bg_class = this.article.bg_class
       let that = this
       this.axios.get(url, {
@@ -213,7 +213,7 @@ export default {
         });
     },
     setlast:function(){
-      let url = 'http://localhost:3306/article/last'
+      let url = 'http://api.hjwxl.com:3000/article/last'
       let bg_class = this.article.bg_class
       let that = this
       this.axios.get(url, {
@@ -235,7 +235,7 @@ export default {
     },
     //获取文章上一篇和下一篇的id
     getPrevNext:function(){
-        let url = 'http://localhost:3306/article/preNext'
+        let url = 'http://api.hjwxl.com:3000/article/preNext'
         let id = this.article.id
         let bg_class = this.article.bg_class
         let that = this

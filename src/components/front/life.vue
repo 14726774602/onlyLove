@@ -63,7 +63,7 @@ export default {
     //页数查询
     getPage:function(){
       //总页数查询
-      let url = 'http://localhost:3306/article/list_pno'
+      let url = 'http://api.hjwxl.com:3000/article/list_pno'
       //获取当前页数
       let bg_class = '1'
       let sm_class = this.$route.query.sm_class
@@ -111,7 +111,7 @@ export default {
     },
     //获取文章
     getArticle:function(){
-      let url = 'http://localhost:3306/article/list'
+      let url = 'http://api.hjwxl.com:3000/article/list'
       //获取当前页数
       let pno = this.at_num
       let bg_class = '1'
